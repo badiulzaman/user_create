@@ -9,20 +9,10 @@ myusers:
      first: manish
      last: sharma
      middle: exam
-   - name: alex
+   - name: raza
      uid: 1012
-     first: alex
-     last: bernad
-     middle: exam
-   - name: graima
-     uid: 1013
-     first: garima
-     last: oswal
-     middle: exam
-   - name: muhammad
-     uid: 1014
-     first: muhammad
-     last: rafiq
-     middle: exam
+     first: raza
+     last: abbasi
+     middle: abid
     
     
