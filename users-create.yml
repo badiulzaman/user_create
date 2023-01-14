@@ -1,18 +1,18 @@
 ---
-- name: creating users and password
+- name: Creating Users and Password
   hosts: localhost
-  become: true
+  gather_facts: no
   vars_files:
     - users.yml
   tasks:
-  - name: create user and set password
-    vars:
-      password: "{{ lookup('password', './password-{{ item.name }}' 'length=15') }}"
-    user:
-      name: "{{ item.name }}"
-      uid: "{{ item.uid}}"
-      comment: "{{ item.first |capitalize }}  {{ item.middle |capitalize }} {{ item.last |capitalize }}"
-      password: "{{password | password_hash('sha512')}}"
-      update_password: on_create
-    with_items:
-      - "{{ myusers }}"
+    - name: Creating Users and Setting Passwords
+      vars:
+        password: "{{ lookup('password', './password-{{ item.name }}' ' length=6') }}"
+      user:
+        name: "{{ item.name }}"
+        uid: "{{ item.uid }}"
+        comment: "{{ item.first |capitalize }} {{ item.middle |capitalize }} {{ item.last |capitalize }}"
+        password: "{{ password| password_hash('sha512') }}" 
+        update_password: on_create
+      with_items:
+        - "{{ myusers }}"
