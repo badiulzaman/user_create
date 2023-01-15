@@ -29,3 +29,13 @@ myusers:
      first: david
      last: warner
      middle: simon
+   - name: muhammad
+     uid: 1017
+     first: muhammad
+     last: hashmi
+     middle: ali
+   - name: ali
+     uid: 1016
+     first: ali
+     last: qureshi
+     middle: akbar
